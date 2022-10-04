@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 1</title>
+  </head>
+  <body>
+    <script>
+      var nota = parseInt(prompt("Dime tu nota del examen: "));
+      function sobresaliente() {
+        alert("Has sacado un sobresaliente");
+      }
+      function aprobado() {
+        alert("Has sacado un aprobado");
+      }
+      function notable() {
+        alert("Has sacado un notable");
+      }
+      function suspenso() {
+        alert("Has suspendido zopenco");
+      }
+      nota >= 9
+        ? sobresaliente()
+        : nota >= 7
+        ? notable()
+        : nota >= 5
+        ? aprobado()
+        : suspenso();
+    </script>
+  </body>
+</html>
