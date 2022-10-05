@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javier Rodriguez Lopez</title>
+  </head>
+  <body>
+    <script>
+      var n = prompt("Dime una cadena: ");
+      var lista0 = split(n);
+      var lista1 = [];
+      function isLetter(str) {
+        return str.length === 1 && str.match(/[a-z]/i);
+      }
+      for (let i of lista0) {
+        if (isLetter(i)){
+          lista1.push(i);
+        }
+      }
+      document.write("Esta es la cadena sin numeros: " + lista2);
+    </script>
+  </body>
+</html>
