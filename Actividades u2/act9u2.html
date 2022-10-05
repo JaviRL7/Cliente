@@ -15,11 +15,15 @@
         return str.length === 1 && str.match(/[a-z]/i);
       }
       for (let i of lista0) {
-        if (isLetter(i)){
+        if (isLetter(i)) {
           lista1.push(i);
         }
       }
       document.write("Esta es la cadena sin numeros: " + lista2);
+      function isLetter(c) {
+        return c.toLowerCase() != c.toUpperCase();
+      }
     </script>
+    <p>Utilizar isLetter para que devuelva el true pero comprobar el isNaN</p>
   </body>
 </html>
