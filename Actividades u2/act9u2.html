@@ -8,22 +8,18 @@
   </head>
   <body>
     <script>
-      var n = prompt("Dime una cadena: ");
-      var lista0 = split(n);
+      var n = prompt("Dame una cadena: ");
+      var lista0 = n.split("");
       var lista1 = [];
-      function isLetter(str) {
-        return str.length === 1 && str.match(/[a-z]/i);
+      function isLetter(c) {
+        return c.toLowerCase() != c.toUpperCase();
       }
       for (let i of lista0) {
         if (isLetter(i)) {
           lista1.push(i);
         }
       }
-      document.write("Esta es la cadena sin numeros: " + lista2);
-      function isLetter(c) {
-        return c.toLowerCase() != c.toUpperCase();
-      }
+      document.write("<h1>"+"Esta es la cadena sin numeros: " + lista1 +"</h1>");
     </script>
-    <p>Utilizar isLetter para que devuelva el true pero comprobar el isNaN</p>
   </body>
 </html>
