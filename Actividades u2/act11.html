@@ -4,9 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Javier Rodriguez Lopez</title>
 </head>
 <body>
-  
+  <script>
+    alert(
+     "Calculadora" + "\n"
+    +"Pulse 1 para sumar" + "\n"
+    +"Pulse 2 para restar" + "\n"
+    +"Pulse 3 para multiplicar" + "\n"
+    +"Pulse 4 para dividir" + "\n"
+    +"Pulse 5 para obtener modulo" + "\n"
+    +"Pulse 6 para salir" + "\n" 
+     )
+     var op = parseInt(prompt("Introduce la opcion: "))
+     switch (op) {
+      case 1:
+      let a = parseInt(prompt("Introduce un numero: "))
+      let b = parseInt(prompt("Introduce otro numero: "))
+      document.write("Esta es la suma: " + (a+b))
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+      case 2:
+      let c = parseInt(prompt("Introduce un numero: "))
+      let d = parseInt(prompt("Introduce otro numero: "))
+      document.write("Esta es la resta: " + (c-d))
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+      case 3:
+      let e = parseInt(prompt("Introduce un numero: "))
+      let f = parseInt(prompt("Introduce otro numero: "))
+      document.write("Esta es la multiplicacion: " + (e*f))
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+      case 4:
+      let g = parseInt(prompt("Introduce un numero: "))
+      let h = parseInt(prompt("Introduce otro numero: "))
+      document.write("Esta es la division: " + (g/h))
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+      case 5:
+      let i = parseInt(prompt("Introduce un numero: "))
+      let j = parseInt(prompt("Introduce otro numero: "))
+      document.write("Esta es el modulo: " + (i%j))
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+      case 6:
+      document.write("<a href='act11.html'>"+"Volver"+"</a>")
+      break
+     }
+
+  </script>
 </body>
 </html>
