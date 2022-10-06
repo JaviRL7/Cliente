@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javier</title>
-</head>
-<body>
-  <Script>
-    alert(
-     "Calculadora" + "\n"
-    +"Pulse 1 para sumar" + "\n"
-    +"Pulse 2 para restar" + "\n"
-    +"Pulse 3 para multiplicar" + "\n"
-    +"Pulse 4 para dividir" + "\n"
-    +"Pulse 5 para obtener modulo" + "\n"
-    +"Pulse 6 para salir" + "\n" 
-     )
-     var op = parseInt(prompt("Introduce la opcion: "))
-     switch (op) {
-      case 1:
-      var o1 = "+" 
-      break
-      case 2:
-      var o1 = "-" 
-      break
-      case 3:
-      var o1 = "*" 
-      break
-      case 4:
-      var o1 = "/" 
-      break
-      case 5:
-      var o1 = "%" 
-      break
-      case 6:
-      document.write("<a href='act11.html'>"+"Volver"+"</a>")
-      break
-     }
-     var p= parseInt(prompt("Introduce un mumero: "))
-     var k= parseInt(prompt("Introduce otro mumero: "))
-     var res = eval(p +o1 +k)
-     document.write(res)
-  </Script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javier</title>
+  </head>
+  <body>
+    <script>
+      alert(
+        "Calculadora" +
+          "\n" +
+          "Pulse 1 para sumar" +
+          "\n" +
+          "Pulse 2 para restar" +
+          "\n" +
+          "Pulse 3 para multiplicar" +
+          "\n" +
+          "Pulse 4 para dividir" +
+          "\n" +
+          "Pulse 5 para obtener modulo" +
+          "\n" +
+          "Pulse 6 para salir" +
+          "\n"
+      );
+      var op = parseInt(prompt("Introduce la opcion: "));
+      switch (op) {
+        case 1:
+          var o1 = "+";
+          break;
+        case 2:
+          var o1 = "-";
+          break;
+        case 3:
+          var o1 = "*";
+          break;
+        case 4:
+          var o1 = "/";
+          break;
+        case 5:
+          var o1 = "%";
+          break;
+        case 6:
+          document.write("<a href='act11.html'>" + "Volver" + "</a>");
+          break;
+      }
+      var p = parseInt(prompt("Introduce un mumero: "));
+      var k = parseInt(prompt("Introduce otro mumero: "));
+      var res = eval(p + o1 + k);
+      document.write(res);
+    </script>
+  </body>
 </html>
