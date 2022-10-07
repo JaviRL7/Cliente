@@ -7,34 +7,33 @@
     <title>Javier Rodriguez Lopez</title>
   </head>
   <body>
+    <button onclick="sumaEnteros()">Enteros</button>
+    <button onclick="sumaReales()">Reales</button>
     <script>
-      var n = prompt("Dame una cadena: ");
+      var n = prompt("Dame un numero: ");
       var m = n.split("");
-      var res = 0;
-      var res1 = 0;
-      var res2 = 0;
-      for (let i of m) {
-        if (i == ",") {
-          var aux = n.split(",");
-          var x1 = aux[0];
-          var x2 = aux[1];
-          for (let j of x1) {
-            res1 += parseInt(j);
+      function sumaReales() {
+        let res = 0;
+        for (let i of m) {
+          if (i == "," || i == ".") {
+            continue;
+          } else {
+            res += Number(i);
           }
-          for (let k of x2) {
-            res2 += parseInt(k);
-          }
-          document.write(
-            "<h1>" + "El resultado con la parte decimal: " + (res1 + res2) + "</h1>"
-          );
-          break;
-        } else {
-          res += parseInt(i);
         }
+        document.write(res);
       }
-      document.write(
-        "<h1>" + "El resultado de los enteros es este: " + res + "</h1>"
-      );
+      function sumaEnteros() {
+        let res = 0;
+        for (let i of m) {
+          if (i == "," || i == ".") {
+            break;
+          } else {
+            res += Number(i);
+          }
+        }
+        document.write(res);
+      }
     </script>
   </body>
 </html>
