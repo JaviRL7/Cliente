@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var n = 1
+    while(n<21){
+      if (n%3 ==0 && n%5==0){
+        alert("Divisible por 3 y 5")
+      } else if (n%3 !=0 && n%5==0){
+        alert("Divisible solo por solo 5")
+      } else if (n%3 ==0 && n%5!=0){
+        alert("Divisible solo por 3")
+      } else{
+        alert(n)
+      }
+      n += 1
+    }
+  </script>
+</body>
+</html>
