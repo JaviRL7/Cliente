@@ -8,16 +8,13 @@
 </head>
 <body>
   <script>
-    var n = prompt ("Introduce cadena: ")
-    m = n.split();
-    c = m
-    reverso = m.reverse();
-    
-    if (c==reverso){
-      alert('palindromo')
-    } else{
-      alert('no es palindromo')
+    var n = prompt("Introduce cadena: ");
+    function palindromo(str){
+      cadena = str.toLowerCase().replace(re, '');
+      reveerso = cadena.split('').reverse().join('')
+      return (cadena===reveerso)
     }
+    alert(palindromo(n))
   </script>
 </body>
 </html>
