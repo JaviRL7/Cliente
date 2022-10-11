@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javier Rodriguez Lopez</title>
-</head>
-<body>
-  <script>
-    function isLetter(c) {
-      return c.toLowerCase() != c.toUpperCase();
-    }
-    var cadena = prompt("Introduce las palabras para el array: ")
-    m = cadena.split(' ')
-    str = cadena.filter(isLetter)
-    if ()
-  </script>  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javier Rodriguez Lopez</title>
+  </head>
+  <body>
+    <div id="cadena"></div>
+    <div id="boleano"></div>
+    <div id="numero"></div>
+    <script>
+      function isLetter(c) {
+        return c.toLowerCase() != c.toUpperCase();
+      }
+      var cadena = prompt("Introduce las palabras para el array, 2 booleanos, 2 cadenas y 2 numeros: ");
+      m = cadena.split(" ");
+      booleanos = [];
+      numeros = [];
+      cadenas = [];
+      for (let i of m) {
+        if (i == "true" || i == "false") {
+          booleanos.push(i);
+        } else if (isLetter(i) == false) {
+          numeros.push(i);
+        } else {
+          cadenas.push(i);
+        }
+      }
+      if (cadenas[0].length > cadenas[1].length) {
+        document.getElementById("cadena").innerHTML =
+          "La cadenama mas larga es: " + cadenas[0];
+      } else {
+        document.getElementById("cadena").innerHTML =
+          "La cadenama mas larga es: " + cadenas[1];
+      }
+      if (booleanos[0] != booleanos[1]) {
+        document.getElementById("boleano").innerHTML =
+          "Los dos booleanos son distintos unos es true y otro es false";
+      } else {
+        if (booleanos[0] == "true") {
+          document.getElementById("boleano").innerHTML =
+            "Los dos booleanos son true";
+        } else {
+          document.getElementById("boleano").innerHTML =
+            "Los dos booleanos son false";
+        }
+      }
+      resultado = eval(parseInt(numeros[0]) + parseInt(numeros[1]));
+      document.getElementById("numero").innerHTML =
+        numeros[0] + "+" + numeros[1] + "=" + resultado;
+    </script>
+  </body>
 </html>
