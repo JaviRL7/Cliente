@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="a"></div>
+  <div id="b"></div>
+  <div id="c"></div>
+  <div id="d"></div>
+  <script>
+    var n = prompt("Introduce un valor en tipo cadena para hacer converciones")
+    var literales = ['uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez']
+    var numero = 0
+    function isLetter(c) {
+        return c.toLowerCase() != c.toUpperCase();
+      }
+    if (isLetter(n)){
+      document.getElementById("1").innerHTML =
+            "Has introducido un valor convertible a numero y este es su valor"+parseInt(n);
+    }
+    for (let i of literales){
+      if (i == n){
+        document.getElementById("2").innerHTML =
+            "Has introducido un numero en forma literal";
+            numero = literales.indexOf(i)
+            document.getElementById("3").innerHTML =
+            "Este es el literal convertido a numero" +numero;
+      }
+    }
+    if (n=='0' || n=='False' || n=='false'){
+      document.getElementById("3").innerHTML =
+            "Has introducido un valor convertible a booleano: False";
+    }
+    if (n=='1' || n=='true' || n=='True'){
+      document.getElementById("3").innerHTML =
+            "Has introducido un valor convertible a booleano: True";
+    }
+  </script>
+</body>
+</html>
