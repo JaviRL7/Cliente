@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 6 JRL</title>
+  </head>
+  <body>
+    <div id="mostrar"></div>
+    <div id="laHora"></div>
+    <label for="zona">
+      Elige una zona horaria
+      <select name="zona" id="zona" onchange="zona()">
+        <option value="0">utc</option>
+        <option value="1">utc + 1</option>
+        <option value="2">utc + 2</option>
+        <option value="3">utc + 3</option>
+        <option value="4">utc + 4</option>
+        <option value="5">utc + 5</option>
+        <option value="6">utc + 6</option>
+        <option value="7">utc + 7</option>
+        <option value="8">utc + 8</option>
+        <option value="9">utc + 9</option>
+        <option value="10">utc + 10</option>
+        <option value="11">utc + 11</option>
+        <option value="12">utc + 12</option>
+        <option value="-1">utc - 1</option>
+        <option value="-2">utc - 2</option>
+        <option value="-3">utc - 3</option>
+        <option value="-4">utc - 4</option>
+        <option value="-5">utc - 5</option>
+        <option value="-6">utc - 6</option>
+        <option value="-7">utc - 7</option>
+        <option value="-8">utc - 8</option>
+        <option value="-9">utc - 9</option>
+        <option value="-10">utc - 10</option>
+        <option value="-11">utc - 11</option>
+        <option value="-12">utc - 12</option>
+      </select>
+    </label>
+    <script>
+      function zona() {
+        var zon = document.getElementById("zona").value;
+        document.getElementById("mostrar").innerHTML = "esta es la zona " + zon;
+        var miFecha = new Date();
+        var hora = miFecha.getHours();
+        var minutos = miFecha.getMinutes();
+        var segundos = miFecha.getSeconds();
+        var horas = hora + parseInt(zon)
+        if (horas < 10) {
+          horas = "0" + horas;
+        }
+        if (minutos < 10) {
+          minutos = "0" + minutos;
+        }
+        if (segundos < 10) {
+          segundos = "0" + segundos;
+        }
+        var texto = document.getElementById("laHora");
+        texto.innerHTML = horas + ":" + minutos + ":" + segundos;
+      }
+      window.onload = function () {
+          Lazona = setInterval(zona, 1000);
+        };
+    </script>
+  </body>
+</html>
