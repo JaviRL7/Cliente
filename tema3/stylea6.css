@@ -6,11 +6,15 @@
   height: 400;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#saludopag{
+#mostrar{
   text-align: center;
   font-size: xx-large;
-  color: chartreuse;
-  height: 400;
-  background-color: darkorchid;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: azure;
+}
+
+#menu{
+  background-color: cadetblue;
+  display: flex;
+  font-size: xx-large;
+  text-align: center;
 }

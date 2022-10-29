@@ -5,40 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Actividad 6 JRL</title>
+    <link rel="stylesheet" href="stylea6.css">
   </head>
   <body>
     <div id="mostrar"></div>
     <div id="laHora"></div>
-    <label for="zona">
-      Elige una zona horaria
-      <select name="zona" id="zona" onchange="zona()">
-        <option value="0">utc</option>
-        <option value="1">utc + 1</option>
-        <option value="2">utc + 2</option>
-        <option value="3">utc + 3</option>
-        <option value="4">utc + 4</option>
-        <option value="5">utc + 5</option>
-        <option value="6">utc + 6</option>
-        <option value="7">utc + 7</option>
-        <option value="8">utc + 8</option>
-        <option value="9">utc + 9</option>
-        <option value="10">utc + 10</option>
-        <option value="11">utc + 11</option>
-        <option value="12">utc + 12</option>
-        <option value="-1">utc - 1</option>
-        <option value="-2">utc - 2</option>
-        <option value="-3">utc - 3</option>
-        <option value="-4">utc - 4</option>
-        <option value="-5">utc - 5</option>
-        <option value="-6">utc - 6</option>
-        <option value="-7">utc - 7</option>
-        <option value="-8">utc - 8</option>
-        <option value="-9">utc - 9</option>
-        <option value="-10">utc - 10</option>
-        <option value="-11">utc - 11</option>
-        <option value="-12">utc - 12</option>
-      </select>
-    </label>
+    <div id="menu">
+      <label for="zona">
+        Elige una zona horaria
+        <select name="zona" id="zona" onchange="zona()">
+          <option value="0">utc</option>
+          <option value="1">utc + 1</option>
+          <option value="2">utc + 2</option>
+          <option value="3">utc + 3</option>
+          <option value="4">utc + 4</option>
+          <option value="5">utc + 5</option>
+          <option value="6">utc + 6</option>
+          <option value="7">utc + 7</option>
+          <option value="8">utc + 8</option>
+          <option value="9">utc + 9</option>
+          <option value="10">utc + 10</option>
+          <option value="11">utc + 11</option>
+          <option value="12">utc + 12</option>
+          <option value="-1">utc - 1</option>
+          <option value="-2">utc - 2</option>
+          <option value="-3">utc - 3</option>
+          <option value="-4">utc - 4</option>
+          <option value="-5">utc - 5</option>
+          <option value="-6">utc - 6</option>
+          <option value="-7">utc - 7</option>
+          <option value="-8">utc - 8</option>
+          <option value="-9">utc - 9</option>
+          <option value="-10">utc - 10</option>
+          <option value="-11">utc - 11</option>
+          <option value="-12">utc - 12</option>
+        </select>
+      </label>
+    </div>
     <script>
       function zona() {
         var zon = document.getElementById("zona").value;
@@ -48,7 +51,7 @@
         var minutos = miFecha.getMinutes();
         var segundos = miFecha.getSeconds();
         var horas = hora + parseInt(zon)
-        if (horas < 10) {
+        if (horas < 10 && horas > 0) {
           horas = "0" + horas;
         }
         if (minutos < 10) {
@@ -56,6 +59,12 @@
         }
         if (segundos < 10) {
           segundos = "0" + segundos;
+        }
+        if (horas < 0){
+          horas = horas + 24
+        }
+        if (horas >= 24) {
+          horas = horas - 24
         }
         var texto = document.getElementById("laHora");
         texto.innerHTML = horas + ":" + minutos + ":" + segundos;
