@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="primera"></div>
+    <div id="resultado"></div>
+    <label for="frase">Escribe una frase:</label>
+    <input type="text" id="frase" size="60" maxlength="60" name="nombre" />
+    <label for="frase">Escribe una palabra que marque el inicio del filtro:</label>
+    <input type="text" id="palabra_inicio" size="35" maxlength="30" name="nombre" />
+    <label for="frase">Escribe una palabra que marque el fin:</label>
+    <input type="text" id="palabra_fin" size="35" maxlength="30" name="nombre" />
+    <button
+      onclick="extraer(document.getElementById('frase').value, document.getElementById('palabra_inicio').value, document.getElementById('palabra_fin').value)"
+    >
+      Extraer palabras
+    </button>
+    <script>
+      function extraer(frase, palabra_inicio, palabra_fin) {
+        lista = frase.split(' ');
+        n1 = 0
+        n2 = lista.length
+        for (x in lista){
+          if (lista[x]==palabra_inicio){
+            n1 = x
+          }
+        }
+        for (y in lista){
+          if (lista[y]==palabra_fin){
+            n2 = y
+          }
+        }
+        res= lista.slice(n1, n2);
+        document.getElementById("resultado").innerHTML = 'esta es la cadena extraida: ' +res
+      }
+    </script>
+  </body>
+</html>

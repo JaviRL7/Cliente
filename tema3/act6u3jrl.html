@@ -47,9 +47,9 @@
         var zon = document.getElementById("zona").value;
         document.getElementById("mostrar").innerHTML = "esta es la zona " + zon;
         var miFecha = new Date();
-        var hora = miFecha.getHours();
-        var minutos = miFecha.getMinutes();
-        var segundos = miFecha.getSeconds();
+        var hora = miFecha.getUTCHours();
+        var minutos = miFecha.getUTCMinutes();
+        var segundos = miFecha.getUTCSeconds();
         var horas = hora + parseInt(zon)
         if (horas < 10 && horas > 0) {
           horas = "0" + horas;
