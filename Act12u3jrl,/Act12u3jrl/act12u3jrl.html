@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="primera"></div>
+    <div id="resultado"></div>
+    <label for="frase">Escribe una frase:</label>
+    <input type="text" id="frase" size="35" maxlength="30" name="nombre" />
+    <label for="frase">Escribe una palabra para buscar:</label>
+    <input type="text" id="palabra" size="35" maxlength="30" name="nombre" />
+    <button onclick="buscar(document.getElementById('frase').value, document.getElementById('palabra').value)">
+      Buscar palabra
+    </button>
+    <script>
+      function buscar(frase, palabra) {
+        lista = frase.toLowerCase().trim().split(' ')
+        res = 'La palabra no esta en la frase'
+        for (let x of lista){
+          if (palabra.toLowerCase()== x){
+            res= 'La palabra esta en la frase'
+          }
+        }
+        document.getElementById('resultado').innerHTML= res  
+      }
+    </script>
+  </body>
+</html>
+
