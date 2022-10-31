@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="primera"></div>
+    <div id="resultado"></div>
+    <label for="frase">Escribe una frase:</label>
+    <input type="text" id="frase" size="35" maxlength="30" name="nombre" />
+    <button onclick="analizar(document.getElementById('frase').value)">
+      Analizar
+    </button>
+    <script>
+      function analizar(frase) {
+        frase1 = frase.trim();
+        frase2 = frase.toUpperCase();
+        frase3 = frase.toLowerCase();
+        alert(frase1);
+        alert(frase2);
+        alert(frase3);
+        if (frase1 == frase2){
+          document.getElementById('resultado').innerHTML='La frase esta en mayusculas'
+        } else if (frase1 == frase3){
+          document.getElementById('resultado').innerHTML='La frase esta en minusculas'
+        } else {
+          document.getElementById('resultado').innerHTML='La frase esta en mayusculas y minusculas'
+        }
+      }
+    </script>
+  </body>
+</html>
