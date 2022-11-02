@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRL</title>
+  </head>
+  <body>
+    <div id="solucion"></div>
+    <div>
+      <fieldset>
+        <label
+          >fecha de nacimiento:
+          <input type="date" id="FECHA" />
+        </label>
+        <button onclick="calcula_edad()">Enviar</button>
+      </fieldset>
+    </div>
+    <script>
+      function calcula_edad() {
+        fecha = new Date(document.getElementById("FECHA").value);
+        fechaActual = new Date();
+        edad = Math.floor((fechaActual - fecha) / 1000 / (3600 * 24 * 365));
+        document.getElementById('solucion').innerHTML='Esta es tu edad: ' +edad
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="solucion"></div>
+    <div>
+      <fieldset>
+          <label>Introduce tu fecha de nacimiento:
+              <input type="date" id="fecha">
+          </label>
+          <button onclick="calcula_edad()">Calcular</button>
+      </fieldset>
+  </div>
+    <script>
+      function calcula_edad() {
+        let fecha = new Date(document.getElementById("fecha").value);
+        const fechaActual = new Date();
+        var respuesta = "";
+        let dias = fechaActual.getDate() - fecha.getDate();
+        let meses = fechaActual.getMonth() - fecha.getMonth();
+        let años = fechaActual.getFullYear() - fecha.getFullYear();
+        if (
+          fecha.getMonth() == fechaActual.getMonth() &&
+          fecha.getDate() == fechaActual.getDate()
+        )
+          respuesta = `Feliz cumpleaños, cumples ${años}`;
+        else {
+          if (dias <= 0 && fecha.getMonth() != fechaActual.getMonth()) meses++;
+          if (meses <= 0) años++;
+          dias = Math.abs(dias);
+          meses = Math.abs(meses);
+          respuesta = `Tienes ${años} años`;
+          if (meses != 0) respuesta += `, ${meses} meses`;
+          if (dias != 0) respuesta += `, ${dias} días`;
+          document.getElementById('solucion').innerHTML='Esta es tu edad en dias mes y años'
+        }
+      }
+    </script>
+  </body>
+</html>
