@@ -7,18 +7,25 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="solucion"></div>
   <label for="texto">Escribe una hora:</label>
-  <textarea id="texto" style="width: 200px; height: 200px;"></textarea>
+  <textarea id="texto" style="width: 500px; height: 500px;"></textarea>
   <button onclick="validar()">
     Validar texto
 </button>
 <script>
+  var reg = /^\w+|((\.\s)|(\n))\w+$/gm
+  res = []
   function validar(){
     let texto = document.getElementById('texto').value;
-    lista1 = texto.split('.')
-    texto1 = lista1.join('')
-    lista2 = texto1.split('')
+    lista = texto.split('.')
+    for (let x of lista){
+      if (x.match(reg)){
+        res.push(x)
+      }
+    }
   }
+    document.getElementById('solucion').innerHTML=res
 </script>
 </body>
 </html>
