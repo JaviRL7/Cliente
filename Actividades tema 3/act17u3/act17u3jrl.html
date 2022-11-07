@@ -8,24 +8,22 @@
 </head>
 <body>
   <div id="solucion"></div>
-  <label for="texto">Escribe una hora:</label>
+  <label for="texto">Escribe un texto:</label>
   <textarea id="texto" style="width: 500px; height: 500px;"></textarea>
   <button onclick="validar()">
     Validar texto
 </button>
 <script>
-  var reg = /^\w+|((\.\s)|(\n))\w+$/gm
+  var reg = /^\w+|((?<=\.)\s)|(\n)\w+$/gm
   res = []
   function validar(){
     let texto = document.getElementById('texto').value;
     lista = texto.split('.')
-    for (let x of lista){
-      if (x.match(reg)){
-        res.push(x)
-      }
+    for (x of lista){
+      if (x.macth(reg))
     }
-  }
-    document.getElementById('solucion').innerHTML=res
+    }
 </script>
+<p>palabra= texto.value.match(reg) y esto en teoria es un array</p>
 </body>
 </html>
