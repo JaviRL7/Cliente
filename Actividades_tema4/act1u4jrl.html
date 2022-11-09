@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JRL</title>
+</head>
+<body>
+  <div id="solucion"></div>
+    <label for="importe">Escribe un importe:</label>
+    <input type="number" id="importe" />
+    <label for="tipo">
+      Elige un tipo
+    <select name="tipo" id="tipo" type="number">
+      <option value="0.21" type="number">Tipo 1</option>
+      <option value="0.10" type="number">Tipo 2</option>
+      <option value="0.05" type="number">Tipo 3</option>
+    </select>
+    <button onclick="calcular(document.getElementById('importe').value, document.getElementById('tipo').value)">Calcular</button>
+  <script>
+    function calcular(num, tipo){
+      importe = parseFloat(num)
+      iva = parseFloat(tipo)
+      res = (importe * iva) + importe
+      document.getElementById('solucion').innerHTML='Esta es la solucion: ' +res
+    }
+  </script>
+</body>
+</html>

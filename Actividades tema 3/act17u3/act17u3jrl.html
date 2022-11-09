@@ -14,16 +14,12 @@
     Validar texto
 </button>
 <script>
-  var reg = /^\w+|((?<=\.)\s)|(\n)\w+$/gm
-  res = []
   function validar(){
-    let texto = document.getElementById('texto').value;
-    lista = texto.split('.')
-    for (x of lista){
-      if (x.macth(reg))
-    }
+    var reg = /^\w+|((?<=\.)\s)|(\n)\w+$/gm
+    var texto = document.getElementById('texto').value;
+    palabras= texto.macth(reg)
+    document.getElementById('solucion').innerHTML='esta es la solu '+palabras
     }
 </script>
-<p>palabra= texto.value.match(reg) y esto en teoria es un array</p>
 </body>
 </html>
