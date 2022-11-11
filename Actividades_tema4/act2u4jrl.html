@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JRL</title>
+</head>
+<body>
+  <div id="solucion"></div>
+  <div id="res"></div>
+  <script>
+    lista = []
+    for (let n=0; n<10; n++){
+      res = Math.floor(Math.random() * (1000) + 1);
+      lista.push(res)
+    }
+    lista.sort(function(a, b){return a - b});
+    resultado = lista.slice(1, 9);
+    document.getElementById('res').innerHTML='Esta es la solucion: '+resultado +
+    ' Esta la original: '+lista
+  </script>
+  <!--Pagina de a funcion compare del sort para ordenar numero y no cadenas https://www.w3schools.com/js/js_array_sort.asp-->
+</body>
+</html>
