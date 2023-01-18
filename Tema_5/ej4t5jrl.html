@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+  <style>
+    #cuadrado {
+        width: 100px;
+        height: 100px;
+        background: white;
+      }
+  </style>
+</head>
+<body>
+  <h1>Click para que el cuadrado sea azul, presiona una tecla para que sea amarillo y mueve el raton para que vuelva a ser blanco</h1>
+  <div id="cuadrado"></div>
+  <script>
+    window.onclick = function cambiar() {
+      document.getElementById('cuadrado').style.background = '#CCE6FF';
+    
+    window.onkeydown = function cambiar2(){
+      document.getElementById('cuadrado').style.background = '#FFFF00';
+
+    }
+
+    window.onmousemove = function cambiar3(){
+      document.getElementById('cuadrado').style.background = 'white';
+    }
+  }
+  </script>
+</body>
+</html>
