@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <div>
+      <form action="" method="post">
+      <fieldset>
+        <legend>Formulario</legend>
+          <label for="name">Introduce tu nombre</label>
+          <input type="text" id="nombre" />
+          <br />
+          <label for="mensaje">Introduce un mensaje</label>
+          <br />
+          <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+      <p>
+        Elige un color:<br />
+        <input type="radio" name="empleoactual" value="red" id="check" onchange="cambia(document.getElementById('check').value)"/>Rojo<br />
+        <input type="radio" name="empleoactual" value="green" id="check2" onchange="cambia(document.getElementById('check2').value)" /> Verde<br />
+        <input type="radio" name="empleoactual" value="blue" id="check3" onchange="cambia(document.getElementById('check3').value)"/> Azul
+      </p>
+      <label for="select">Elige una asignatura: </label>
+      <select name="" id="asignatura">
+        <option value="1">Matematicas</option>
+        <option value="2">Lengua</option>
+        <option value="3">Quimica</option>
+        <option value="4">Fisica</option>
+      </select>
+      <br>
+      <br>
+      <label for="">Selecciona los dias de la semana con disponibilidad</label>
+      <br>
+      <input type="checkbox" value="lunes">Lunes <br>
+      <input type="checkbox" value="martes">Martes <br>
+      <input type="checkbox" value="miercoles">Miercoles <br>
+      <input type="checkbox" value="jueves">Jueves <br>
+      <input type="checkbox" value="viernes">Viernes <br>
+      <br>
+      <label for="select">Elige un dia preferiblemenete: </label>
+      <select name="" id="">
+        <option value="1">Lunes</option>
+        <option value="2">Martes</option>
+        <option value="3">Miercoles</option>
+        <option value="4">Jueves</option>
+        <option value="4">Viernes</option>
+      </select>
+      <br>
+      <br>
+      <button>Haz click para enviar informacion</button>
+      <button>Comenzar a rellenar de nuevo</button>
+      <button "><a href="https://www.google.es">Haz click sobre mi</a></button>
+    </form>
+    </div>
+    <script>
+      function cambia(color){
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
