@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Ejercicio10.js" defer></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div.barra {
+            background: #f0f0f0;
+            box-shadow: 1px 1px 2px gray;
+            max-width: 20%;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        div.barra > div {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+            color: white;
+        }
+
+        div#ios-barra {
+            background-color: rgb(51, 95, 238);
+        }
+
+        div#android-barra {
+            background-color: rgb(51, 218, 126);
+        }
+
+        div#wp-barra {
+            background-color: rgb(141, 69, 223);
+        }
+
+        div#otro-barra {
+            background-color: rgb(255, 82, 177);
+        }
+    </style>
+</head>
+<body>
+    <h2>¿Que cafe te gusta mas?</h2>
+    <form action="">
+        <input type="radio" name="os" id="ios" value="iOS">Cafe solo
+        <br>
+        <input type="radio" name="os" id="Android" value="Android">Cafe con leche
+        <br>
+        <input type="radio" name="os" id="wp" value="Windows Phone">Cafe descafeinado
+        <br>
+        <input type="radio" name="os" id="otro" value="Otro">Cafe con hielo
+        <br>
+        <button type="submit" id="enviar">¡Votar!</button>
+    </form>
+    <label for="ios">Solo</label>
+    <div class="barra">
+        <div id="ios-barra" style="max-width: 0%;">0%</div>
+    </div>
+    <label for="android">Leche</label>
+    <div class="barra">
+        <div id="android-barra" style="max-width: 0%;">0%</div>
+    </div>
+    <label for="wp">Descafeinado</label>
+    <div class="barra">
+        <div id="wp-barra" style="max-width: 0%;">0%</div>
+    </div>
+    <label for="otro">Hielo</label>
+    <div class="barra">
+        <div id="otro-barra" style="max-width: 0%;">0%</div>
+    </div>
+</body>
+</html>

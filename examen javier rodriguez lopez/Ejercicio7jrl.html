@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="Ejercicio7.js"></script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>DATOS PERSONALES ACCESO</legend>
+      <form action="" method="post">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          pattern="^[A-Z]{1}[a-z]{1,9}$"
+          required
+        />
+        <br />
+
+        <label for="apellido">Apellido:</label>
+        <input
+          type="text"
+          name="apellido"
+          id="apellido"
+          pattern="^[A-Z]{1}[a-z]{1,9}$"
+          required
+        />
+        <br />
+
+        <label for="edad">Edad:</label>
+        <input
+          type="number"
+          name="edad"
+          id="edad"
+          pattern="^[0-120]{1}$"
+          required
+        />
+        <br />
+
+        <label for="dni">DNI:</label>
+        <input
+          type="text"
+          name="dni"
+          id="dni"
+          pattern="^\[0-9]{8}[A-Za-z]$"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="">Sexo: </label>
+        <select name="sexo" id="sexo">
+          <option value="hombre">hombre</option>
+          <option value="mujer">mujer</option>
+          <option value="otro">otro</option>
+        </select>
+        <br />
+        <br />
+        <label for="nac">Lugar de nacimineto:</label>
+        <input type="text" name="nac" id="nac" pattern="^[A-Z]{1}[a-z]{3,9}" />
+        <span></span>
+        <br />
+        <br />
+        <input type="submit" value="GUARDAR" id="guardar" />
+        <input type="button" value="VER" id="ver" />
+      </form>
+    </fieldset>
+  </body>
+</html>

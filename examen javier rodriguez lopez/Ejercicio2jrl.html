@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>móvil</title>
+    <style></style>
+  </head>
+  <body>
+    <img src="perro.jpeg" id="img" />
+    <script>
+      window.onmousedown = function imagen0() {
+        document.getElementById("img").src = "gato.jpeg";
+      };
+      window.onmouseup = function imagen0() {
+        document.getElementById("img").src = "perro.jpeg";
+      };
+      var img = document.getElementById("img");
+      img.ondragstart = function () {
+        return false;
+      };
+
+      img.onmousedown = function (event) {
+        img.style.position = "relative";
+        img.style.zIndex = 1000;
+
+        document.body.append(img);
+
+        function moveAt(pageX, pageY) {
+          img.style.left = pageX - img.offsetWidth / 2 + "px";
+          img.style.top = pageY - img.offsetHeight / 2 + "px";
+        }
+
+        moveAt(event.pageX, event.pageY);
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener("mousemove", onMouseMove);
+
+        img.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+          img.onmouseup = null;
+        };
+      };
+    </script>
+  </body>
+</html>

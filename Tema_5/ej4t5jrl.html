@@ -17,6 +17,12 @@
   <h1>Click para que el cuadrado sea azul, presiona una tecla para que sea amarillo y mueve el raton para que vuelva a ser blanco</h1>
   <div id="cuadrado"></div>
   <script>
+    document.addEventListener('keydown', (event) => {
+  
+     if (event.keyCode == 65 || event.keyCode == 97) {
+         console.log("has pulsado a");
+     }
+}, false);
     window.onclick = function cambiar() {
       document.getElementById('cuadrado').style.background = '#CCE6FF';
     
