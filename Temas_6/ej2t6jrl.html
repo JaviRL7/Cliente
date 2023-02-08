@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1 tema 6</title>
+</head>
+<body>
+  <div>
+    <input type="number" id="nodo" min="0" max="10">
+    <button id="add">Añadir</button>
+    <button id="del">Borrar</button>
+</div>
+
+<main>
+
+</main>
+  <script>
+    document.getElementById('add').addEventListener('click', () => {
+    let add = document.getElementById('nodo').value ? document.getElementById('nodo').value : 0;
+    añadir(add);
+})
+document.getElementById('del').addEventListener('click', () => {
+    let main = document.getElementsByTagName('main')[0];
+    let last = main.lastChild ? main.lastChild.textContent : false;
+    if(last)main.removeChild(main.lastChild);
+    else alert("No hay nada que borrar");
+})
+
+
+function añadir(x) {
+    if(!x) return alert("Error");
+    let main = document.getElementsByTagName('main')[0];
+    let rama = document.createElement('div');
+    let nodo = document.createTextNode("Nota = "+x)
+    rama.appendChild(nodo);
+    main.appendChild(rama);
+   document.getElementById('nodo').value = ""; 
+}
+  </script>
+</body>
+</html>
